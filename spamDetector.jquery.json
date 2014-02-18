@@ -1,0 +1,23 @@
+{
+"name": "spamDetector",
+"title": "jQuery Spam Detector",
+"description": "jQuery plugin for Detecting and Stoping manual spamming in online content( like comment system) etc.",
+"keywords": [
+"Spam",
+"Bot"
+],
+"version": "1.0.0",
+"author": {
+"name": "Anirban Nath",
+"url": "https://github.com/jquery/jquery-color/blob/2.1.2/AUTHORS.txt"
+},
+"licenses": [
+{
+"type": "MIT",
+"url": "https://github.com/jquery/jquery-color/blob/2.1.2/MIT-LICENSE.txt"
+}
+],
+ "dependencies": {
+"jquery": ">=1.5"
+}
+}

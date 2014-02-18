@@ -1,0 +1,52 @@
+<script src="http://code.jquery.com/jquery-latest.min.js"type="text/javascript"></script>
+
+<script src="spamDetector.js"></script>
+
+<script type="text/javascript">
+
+
+
+$( document ).ready(function()
+{
+	
+	$( "#commentbox" ).spamDetector(
+
+		{
+			spamWordsInUri  	: ['free', 'vote', 'play'],
+			bannedWords 		: ['Levitra', 'viagra', 'casino', '*'],
+			alertText       	: 'Sorry, your content seems spammy , please check', 
+			onlyReturnStatus	: false,
+			spamLevel       	: 2,
+			textLimit 			: 200,
+			checkOnType     	: true,
+			displayWarning 		: true,
+			maxUrlAllowed 		: 2,
+			maxUrlLength		: 150,
+			formObj         	: '#myForm',
+			errorTextContainer  : '#myErrorDiv',
+			limitTextContainer  : '#myLimitDiv',
+			warningStyle 	: { 'color': 'black', 'background-color': 'snow', 'padding': '.2px','border': '1px solid red'},
+			limitStyle 	: { 'color': '#580000' , 'background-color': '#E0E0E0'}
+		}
+	);
+
+
+});
+
+
+</script>
+
+<style>
+#title{color:blue;}
+</style>
+
+
+<h2 id='title'>jQuery Spam Detector plugin(spam validator)</h2>
+
+<form id='myForm' >
+<textarea rows="12" cols="80" name="comment" name='comment' id='commentbox'>Enter Comments here</textarea>
+<div id='myErrorDiv' ></div>
+<br/>
+<div id='myLimitDiv' ></div>
+<input type='submit' value='Enter'/>
+</form>
