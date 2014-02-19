@@ -1,12 +1,12 @@
 {
 "name": "spamDetector-Beta",
 "title": "jQuery Spam Detector",
-"description": "jQuery plugin for Detecting and Stoping manual spamming in online content( like comment system) etc.",
+"description": "jQuery plugin(beta version) for Detecting and Stoping manual spamming in online content( like comment system) etc.",
 "keywords": [
 "Spam",
 "Bot"
 ],
-"version": "1.0.0",
+"version": "0.0.1",
 "author": {
 "name": "Anirban Nath",
 "url": "https://github.com/jquery/jquery-color/blob/2.1.2/AUTHORS.txt"
