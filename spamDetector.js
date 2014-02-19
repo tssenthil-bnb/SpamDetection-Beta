@@ -45,9 +45,9 @@
 
 			if(number_of_url > 0)
 			{
-				if(number_of_url >= settings.maxUrlAllowed)
+				if(number_of_url > settings.maxUrlAllowed)
 				{
-					spam_point +=	number_of_url ;
+					spam_point +=	settings.spamLevel ;
 				}
 				else
 				{
@@ -80,7 +80,7 @@
 			{
 				if (text.toLowerCase().indexOf(value) >= 0)
 				{
-					spam_point += 1;
+					spam_point += settings.spamLevel;
 				}
 
 
