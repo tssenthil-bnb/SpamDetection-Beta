@@ -11,7 +11,7 @@
 
 <script type="text/javascript">
 
-
+$( "#result" ).load( "http://markdown.io/https://github.com/codingantGit/SpamDetection-Beta/blob/master/README.md" );
 
 $( document ).ready(function()
 {
@@ -44,22 +44,123 @@ $( document ).ready(function()
 </script>
 
 <style>
-	#title{color:blue;}
+	#title{color:#7A7277;}
+	#intro{color:green;}
+	#wrapper {margin-left: 25%;}
+	#code {
+	color: #7A7277;
+	font-size: 1.2em;
+	}
+	.right-t {
+	float: left;
+	clear: right;
+	width: 82%;
+	}
+	.left-t {
+	float: left;
+	width: 17%;
+	clear: left;
+	color: rgb(136, 55, 75);
+	}
+	.green-t {
+	width: 100%;
+	float: left;
+	}
+	#demo{margin-top:1%;}
 </style>
 
 </head>
 
 <body>
 
-<h2 id='title'>jQuery Spam Detector plugin(spam validator)</h2>
+<div id='result'></div>
+<div id='wrapper'>
 
-<form id='myForm' >
-<textarea rows="12" cols="80" name="comment" name='comment' id='commentbox'>Enter Comments here</textarea>
-<div id='myErrorDiv' ></div>
-<br/>
-<div id='myLimitDiv' ></div>
-<input type='submit' value='Enter'/>
-</form>
+	<h2 id='title'>jQuery Spam Detector plugin(spam validator) -Beta Version</h2>
+	<p id='intro'>
+	This plugin is in BETA stage , package will be refactored and improved in future releases.<br>
+	Its a basic Manual Spam detection Plugin that detects presence of Spam contents, based on <br>
+	some predefined(most can be set by users) rules and norms . This plugin has got plenty of <br>
+	settings according to various needs of users.
+	</p>
 
+	<b>Settings / Configurations</b><br/>
+	<div id="code">
+			<div class='green-t'>
+	<div class='left-t'>spamWordsInUri</div>
+	<div class='right-t'>: Spam words in URI that needs to restricted.</div>
+</div>
+<div class='green-t'>
+	<div class='left-t'> bannedWords </div>
+	<div class='right-t'>: Vulgar or Profane words that needs to restricted.</div>
+</div>
+<div class='green-t'>
+	<div class='left-t'> alertText  </div>
+	<div class='right-t'>: The warning text. </div>
+</div>
+<div class='green-t'>
+	<div class='left-t'> onlyReturnStatus</div>
+	<div class='right-t'>: Default (false),If enabled it will disable all other warning display, and will only return 
+							(TRUE for spam presence, False for no spams). Useful when want to include this with other validator options</div>
+</div>
+<div class='green-t'>
+	<div class='left-t'> spamLevel </div>
+	<div class='right-t'>: The max level on which content can be considered as spam.(recommended 2).</div>
+</div>
+<div class='green-t'>
+	<div class='left-t'> textLimit </div>
+	<div class='right-t'>: Text limit ,(disable : False).</div>
+</div>
+<div class='green-t'>
+	<div class='left-t'> checkOnType </div>
+	<div class='right-t'>: default(true) on keypress even shows the message if spam</div>
+</div>
+<div class='green-t'>
+	<div class='left-t'> displayWarning </div>
+	<div class='right-t'>: default(true), Turn off warning message or not</div>
+</div>
+<div class='green-t'>
+	<div class='left-t'> maxUrlAllowed </div>
+	<div class='right-t'>: The number of URLs allowed in content</div>
+</div>
+<div class='green-t'>
+	<div class='left-t'> maxUrlLength </div>
+	<div class='right-t'>: Url length</div>
+</div>
+<div class='green-t'>
+	<div class='left-t'> formObj </div>
+	<div class='right-t'>: Can be given 'ID' or 'Class' or 'form' if to check on submit form validation , else leave empty to disable .</div>
+</div>
+<div class='green-t'>
+	<div class='left-t'> errorTextContainer </div>
+	<div class='right-t'>: Error div Id( can be class also).</div>
+</div>
+<div class='green-t'>
+	<div class='left-t'> limitTextContainer </div>
+	<div class='right-t'>: Limit div Id can be class also).</div>
+</div>
+<div class='green-t'>
+	<div class='left-t'> warningStyle </div>
+	<div class='right-t'>:  Style of warning Text.</div>
+</div>
+<div class='green-t'>
+	<div class='left-t'> limitStyle </div>
+	<div class='right-t'>: Style of Limit Text.</div>
+</div>
+<br>
+(**Must include &lt;script src="spamDetector.js type="text/javascript" &gt;&lt;/script&gt;)
+	</div>
+
+<div id='demo'><b>Demo</b></div>
+
+	<form id='myForm' >
+	<textarea rows="12" cols="80" name="comment" name='comment' id='commentbox'>Enter Comments here</textarea>
+	<div id='myErrorDiv' ></div>
+	<br/>
+	<div id='myLimitDiv' ></div>
+	<input type='submit' value='Enter'/>
+	</form>
+
+</div>
 </body>
 </html>
