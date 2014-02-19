@@ -21,6 +21,7 @@ settings according to various needs of users.
 <b> maxUrlAllowed      :</b> The number of URLs allowed in content. <br>
 <b> formObj      :</b> Can be given 'ID' or 'Class' or 'form' if to check on submit form validation , else leave empty to 						disable . <br>
 
-<b> alertText      :</b> The warning text. <br>
-<b> alertText      :</b> The warning text. <br>
-<b> alertText      :</b> The warning text. <br>
+<b> errorTextContainer      :</b>Error div Id( can be class also). <br>
+<b> limitTextContainer      :</b> Limit div Id can be class also). <br>
+<b> warningStyle      :</b> Style of warning Text.<br>
+<b> limitStyle      :</b>Style of Limit Text..<br>
