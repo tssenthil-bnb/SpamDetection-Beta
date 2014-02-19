@@ -10,13 +10,9 @@
 
 
 <script type="text/javascript">
-
-$( document ).ready(function()
-{
+$( document ).ready(function(){
 	
-	$( "#commentbox" ).spamDetector(
-
-		{
+	$( "#commentbox" ).spamDetector({
 			spamWordsInUri  	: ['free', 'vote', 'play'],
 			bannedWords 		: ['Levitra', 'viagra', 'casino', '*'],
 			alertText       	: 'Sorry, your content seems spammy , please check', 
@@ -34,11 +30,7 @@ $( document ).ready(function()
 			limitStyle 	: { 'color': '#580000' , 'background-color': '#E0E0E0'}
 		}
 	);
-
-
 });
-
-
 </script>
 
 <style>

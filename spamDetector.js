@@ -1,12 +1,9 @@
-
-
 (function ( $ ) //IIFE 
 {
 	$.fn.spamDetector = function(options) 
 	{	
 		var thisObj 	=	this;
 		var is_spam 	=	0;
-
 
 		var settings = $.extend({
 			spamWordsInUri  : ['free', 'vote', 'play'],
@@ -35,90 +32,62 @@
 			var return_array 	= [];
 			var regexToken 		= /(www\.|https?:\/\/)?[a-z0-9]+\.[a-z0-9]{2,4}\S*/gi;
 
-			while( (matchArray = regexToken.exec( source )) !== null )
-			{
+			while( (matchArray = regexToken.exec( source )) !== null ){
 				var token = matchArray[0];
 				urlArray.push( token );
 			}
 
 			var number_of_url 	=	urlArray.length;
 
-			if(number_of_url > 0)
-			{
-				if(number_of_url > settings.maxUrlAllowed)
-				{
+			if(number_of_url > 0){
+				if(number_of_url > settings.maxUrlAllowed){
 					spam_point +=	settings.spamLevel ;
 				}
-				else
-				{
-					spamWordsInUri  = ['free', 'vote', 'play'];
+				else{
+						spamWordsInUri  = ['free', 'vote', 'play'];
 
-					$.each( urlArray, function( index, value )
-					{
-						if(value.length > settings.maxUrlLength)
-							spam_point += 1;
+						$.each( urlArray, function( index, value ){
+							if(value.length > settings.maxUrlLength)
+								spam_point += 1;
 
-						$.each( settings.spamWordsInUri, function( index, value_spams )
-						{
+						$.each( settings.spamWordsInUri, function( index, value_spams ){
 
-							if (value.toLowerCase().indexOf(value_spams) >= 0)
-							{
+							if (value.toLowerCase().indexOf(value_spams) >= 0){
 								spam_point += 1;
 							}
-
 						}); 
-
 					}); 
-
 				}
 			}
 
-			bannedWords 	  =	['Levitra', 'viagra', 'casino', '*']; 
+			bannedWords = ['Levitra', 'viagra', 'casino', '*']; 
 
-
-			$.each( settings.bannedWords, function( index, value )
-			{
-				if (text.toLowerCase().indexOf(value) >= 0)
-				{
+			$.each( settings.bannedWords, function( index, value ){
+				if (text.toLowerCase().indexOf(value) >= 0){
 					spam_point += settings.spamLevel;
 				}
-
-
 			});
 
-			if(settings.textLimit && settings.textLimit != '')
-			{
-				if(text.length > settings.textLimit)
-				{
+			if(settings.textLimit && settings.textLimit != ''){
+				if(text.length > settings.textLimit){
 					spam_point += settings.spamLevel;
 				}
 		    }
 
-
-
-			if(spam_point >= settings.spamLevel)
-			{
-				if(! settings.onlyReturnStatus)
-				{
-					if(settings.displayWarning)
-					{
-						$('#error_text').show();
+			if(spam_point >= settings.spamLevel){
+				if(! settings.onlyReturnStatus){
+						if(settings.displayWarning){
+							$('#error_text').show();
 					}
 				}
-
 				is_spam = 1;
-
 			}
-			else
-			{
-				if(settings.displayWarning)
-				{
-					$('#error_text').hide();
-				}
-
+			else{
+					if(settings.displayWarning){
+						$('#error_text').hide();
+					}
 				is_spam = 0;
 			}
-
 			return is_spam;
 		};
 
@@ -131,13 +100,11 @@
 
 					calculateSpam();
 
-					if(settings.textLimit && settings.textLimit != '')
-					{
+					if(settings.textLimit && settings.textLimit != ''){
 						$(settings.limitTextContainer).html("<span id='limit_box'></span>");
 						$('#limit_box').css(settings.limitStyle);
 
-						if(thisObj.val().length > settings.textLimit)
-						{
+						if(thisObj.val().length > settings.textLimit){
 							if( e.keyCode === 8 || e.keyCode === 46 ) {
 							        return; // backspace (8) / delete (46)
 							    }
@@ -149,34 +116,24 @@
 							e.preventDefault();
 							$('#limit_box').text("you can not exceed "+ ((settings.textLimit))+' characters limit');
 						}
-						else
-						{
+						else{
 							$('#limit_box').text("you have " + ((settings.textLimit)-thisObj.val().length)+' characters left');
-						}
-						
+						}	
 					}
-
 				});
 			}
 
-			if($(settings.formObj))
-			{
+			if($(settings.formObj)){
 				$( settings.formObj).bind( "submit", function() {
 
 					if(calculateSpam())
 						return false;
 				});
 			}		
-			
 		}
-		else
-		{
+		else{
 			return calculateSpam();
 		}
-
-
 	};
-
-
 }( jQuery ));
 

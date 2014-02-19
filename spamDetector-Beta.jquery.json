@@ -4,12 +4,15 @@
 "description": "jQuery plugin(Beta Version) for Detecting and Stoping manual spamming in online content( like comment system) etc.",
 "keywords": [
 "Spam",
-"Bot"
+"Bot",
+"form",
+"input"
 
 ],
-"version": "0.0.4",
+"version": "0.0.5",
 "author": {
 "name": "Anirban Nath",
+"email": "anirban.mcs@gmail.com",
 "url": "https://github.com/codingantGit"
 },
 "licenses": [
@@ -18,6 +21,10 @@
 "url": "https://github.com/codingantGit"
 }
 ],
+"bugs": "https://github.com/codingantGit/SpamDetection-Beta/issues",
+    "homepage": "https://github.com/codingantGit/SpamDetection-Beta",
+    "docs": "https://github.com/codingantGit/SpamDetection-Beta/blob/master/README.md",
+    "download": "https://github.com/codingantGit/SpamDetection-Beta/archive/master.zip",
  "dependencies": {
 "jquery": ">=1.5"
 }
