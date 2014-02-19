@@ -1,16 +1,13 @@
 {
 "name": "spamDetector-Beta",
 "title": "jQuery Spam Detector- Beta",
-"description": "This plugin is in BETA stage , package will be refactored and improved in future releases.<br>
-	Its a basic Manual Spam detection Plugin that detects presence of Spam contents, based on <br>
-	some predefined(most can be set by users) rules and norms . This plugin has got plenty of <br>
-	settings according to various needs of users.",
+"description": "jQuery plugin(Beta Version) for Detecting and Stoping manual spamming in online content( like comment system) etc.",
 "keywords": [
 "Spam",
 "Bot"
 
 ],
-"version": "0.0.3",
+"version": "0.0.4",
 "author": {
 "name": "Anirban Nath",
 "url": "https://github.com/codingantGit"
