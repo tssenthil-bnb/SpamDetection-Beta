@@ -1,4 +1,4 @@
-SpamDetection
+SpamDetection - Enhancement & PR for hactoberfest
 =============
 
 This plugin is in BETA stage , package will be refactored and improved in future releases.<br>
