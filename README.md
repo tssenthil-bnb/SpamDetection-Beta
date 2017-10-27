@@ -1,4 +1,4 @@
-SpamDetection - Enhancement & PR for hacktoberfest
+SpamDetection - Enhancement & PR for hacktoberfest Senthil
 =============
 
 This plugin is in BETA stage , package will be refactored and improved in future releases.<br>
